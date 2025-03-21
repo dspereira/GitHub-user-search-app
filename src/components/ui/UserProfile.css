@@ -1,0 +1,31 @@
+.profile-container {
+    width: 100%;
+}
+
+.user-name {
+    font-size: calc(26 / 16 * 1rem);
+    font-weight: 700;
+}
+
+.name-date-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-username-container {
+    display: flex;
+    flex-direction: column;
+    gap: calc(2 / 16 * 1rem);
+}
+
+.stats-count-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: calc(15 / 16 * 1rem) 
+             calc(83 / 16 * 1rem) 
+             calc(17 / 16 * 1rem) 
+             calc(32 / 16 * 1rem);
+    background-color: #F6F8FF;
+    border-radius: calc(10 / 16 * 1rem);
+}

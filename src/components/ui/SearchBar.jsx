@@ -1,6 +1,6 @@
 import "./SearchBar.css";
 import icon from "../../assets/icon-search.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import processApiData from "../utils/dataUtils";
 
 
@@ -8,6 +8,24 @@ const apiUrl = "https://api.github.com/users/";
 
 function SearchBar({ onUserProfileUpdate  }) {
   const [username, setUsername] = useState("");
+
+  useEffect(() => {
+    async function fetchUserData() {
+      try {
+        const res = await fetch(`${apiUrl}octocat`);
+        const data = await res.json();
+        const new_data = processApiData(data);
+        if (!new_data.bio) 
+          new_data.bio = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.";
+        onUserProfileUpdate(new_data);
+      }
+      catch(e) {
+        console.log("error: ", e);
+      }
+    }
+    fetchUserData();
+  }, []);
+
 
   const handleSubmit = async (e) => {
   e.preventDefault();

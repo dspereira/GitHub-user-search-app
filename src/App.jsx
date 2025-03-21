@@ -6,7 +6,7 @@ import UserProfile from "./components/ui/UserProfile"
 import { useState } from "react";
 
 function App() {
-  const [userProfileData, setUserProfileData] = useState({});
+  const [userProfileData, setUserProfileData] = useState(null);
 
   return (
     <>

@@ -22,8 +22,19 @@ function getField(field, data) {
 
 function formatingDate(timeDate) {
   const date = new Date(timeDate);
-  const day = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate();
-  const month = date.toLocaleString('en-EN', { month: 'long' }).substring(0, 3);
+  const day = addZeroPrefix(date.getDate());
+  const month = addZeroPrefix(date.getMonth() + 1);
+  const monthStr = date.toLocaleString('en-EN', { month: 'long' }).substring(0, 3);
   const year = date.getFullYear();
-  return `Joined ${day} ${month} ${year}`;
+
+  return {
+    date:  `Joined ${day} ${monthStr} ${year}`,
+    day,
+    month,
+    year
+  }
+}
+
+function addZeroPrefix(number) {
+  return number < 10 ? `0${number}` : `${number}`;
 }
