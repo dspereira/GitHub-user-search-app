@@ -13,6 +13,9 @@ function SearchBar({ onUserProfileUpdate  }) {
     async function fetchUserData() {
       try {
         const res = await fetch(`${apiUrl}octocat`);
+        //const res = await fetch(`${apiUrl}jonasschmedtmann`);
+        //const res = await fetch(`${apiUrl}luis-prates`);
+        
         const data = await res.json();
         const new_data = processApiData(data);
         if (!new_data.bio) 

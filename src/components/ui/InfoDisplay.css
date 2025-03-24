@@ -1,0 +1,28 @@
+.info-link:link,
+.info-link:visited {
+    all: unset;
+    cursor: pointer;
+}
+
+.info-link:hover,
+.info-link:active {
+    text-decoration: underline;
+}
+
+.info-display-container,
+.info-display-container a.info-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px
+}
+
+.img-container {
+    width: 20px;
+}
+
+.info-display-container {
+    color: #4B6A9B;
+    font-size: calc(15 / 16 * 1rem);
+    font-weight: 400;
+}

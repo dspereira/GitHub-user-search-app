@@ -1,3 +1,9 @@
+.avatar-img {
+    width: calc(117 / 16 * 1rem);
+    height: calc(117 / 16 * 1rem);
+    border-radius: 100%;
+}
+
 .profile-container {
     width: 100%;
 }
@@ -28,4 +34,30 @@
              calc(32 / 16 * 1rem);
     background-color: #F6F8FF;
     border-radius: calc(10 / 16 * 1rem);
+}
+
+
+.name {
+   font-size: calc(26 / 16 * 1rem);
+   font-weight: 700;
+   color: #2B3442;
+}
+
+.username {
+    font-size: calc(16 / 16 * 1rem);
+    font-weight: 400;
+    color: #0079FF;
+}
+
+.bio {
+    font-size: calc(15 / 16 * 1rem);
+    font-weight: 400;
+    line-height: 25px;
+    color: #4B6A9B;
+}
+
+.creation-date {
+    font-size: calc(15 / 16 * 1rem);
+    font-weight: 400;
+    color: #697C9A;
 }
