@@ -27,18 +27,18 @@ function UserProfile({ userProfileData }) {
 
       <img className="avatar-img" src={data.avatar_url}/>
 
-      <div className="name-date-container">
-        <div className="name-username-container">
-          <h2 className="name">{data.name}</h2>
-          <p className="username">@{data.login}</p>
-        </div>
-        <time 
-          className="creation-date"
-          dateTime={`${date.year}-${date.month}-${date.day}`}
-        >
-          {date.date}
-        </time>
+      <div className="name-username-container">
+        <h2 className="name">{data.name}</h2>
+        <p className="username">@{data.login}</p>
       </div>
+
+      <time 
+        className="creation-date"
+        dateTime={`${date.year}-${date.month}-${date.day}`}
+      >
+        {date.date}
+      </time>
+
       <p className="bio">{data.bio}</p>
 
       <div className="stats-count-container">
@@ -56,15 +56,14 @@ function UserProfile({ userProfileData }) {
         />
       </div>
 
-      {/* <img src={iconLocation} alt=""/>
-      <p>San Francisco</p> */}
-
-      <InfoDisplay 
+      <InfoDisplay
+        className="location"
         icon={iconLocation}
         alt={"Location Icon"}
         info={data.location}
       />
-      <InfoDisplay 
+      <InfoDisplay
+        className="website"
         icon={iconWebsite}
         alt={"Website Icon"}
         info={data.blog}
@@ -74,18 +73,19 @@ function UserProfile({ userProfileData }) {
           ? data.blog : `https://${data.blog}`
         }
       />
-      <InfoDisplay 
+      <InfoDisplay
+        className="twitter"
         icon={iconTwitter}
         alt={"Twitter Icon"}
         info={data.twitter && `@${data.twitter}`}
         link={`https://x.com/${encodeURIComponent(data.twitter)}`}
       />
-      <InfoDisplay 
+      <InfoDisplay
+        className="company"
         icon={iconCompany}
-        alt={"Compant Icon"}
-        info={data.location}
+        alt={"Company Icon"}
+        info={data.company}
       />
-
     </div>
   )
 }
