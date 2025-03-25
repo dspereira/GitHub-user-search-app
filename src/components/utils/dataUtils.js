@@ -7,7 +7,7 @@ export default function processApiData(data) {
     name: getField("name", data),
     login: getField("login", data),
     location: getField("location", data),
-    bio: getField("bio", data),
+    bio: getField("bio", data) || "This profile has no bio",
     followers: getField("followers", data),
     following: getField("following", data),
     repos: getField("public_repos", data),

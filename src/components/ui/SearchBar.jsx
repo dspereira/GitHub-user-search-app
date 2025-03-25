@@ -14,10 +14,7 @@ function SearchBar({ onUserProfileUpdate  }) {
       try {
         const res = await fetch(`${apiUrl}octocat`);
         const data = await res.json();
-        const new_data = processApiData(data);
-        if (!new_data.bio) 
-          new_data.bio = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.";
-        onUserProfileUpdate(new_data);
+        onUserProfileUpdate (processApiData(data));
       }
       catch(e) {
         console.log("error: ", e);

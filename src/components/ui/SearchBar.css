@@ -12,7 +12,7 @@
     font-size: calc(18 / 16 * 1rem);
     font-weight: 400;
     color: #222731;
-    background-color: #FEFEFE;
+    background-color: var(--component-background-color);
 }
 
 .search-bar::placeholder {

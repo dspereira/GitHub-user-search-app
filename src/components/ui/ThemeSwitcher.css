@@ -1,0 +1,11 @@
+.btn-theme {
+    font-family: "Space Mono", monospace, sans-serif;
+    font-size: calc(13 / 16 * 1rem);
+    font-weight: 700;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--theme-toggle-btn-color);
+}

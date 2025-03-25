@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+
+:root {
+  --withe: #FFFFFF;
+}
+
+:root[theme="light"] {
+  --body-background-color: #F6F8FF;
+  --component-background-color: #FEFEFE;
+  --theme-toggle-btn-color: #697C9A;
+  --primary-title: var(#222731);
+}
+
+:root[theme="dark"] {
+  --body-background-color: #141D2F;
+  --component-background-color: #1E2A47;
+  --theme-toggle-btn-color: var(--withe);
+  --primary-title: var(--withe);
+
+}
+
 *,
 *::before,
 *::after {
@@ -16,4 +36,8 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #F2F2F2;
+}
+
+body {
+  background-color: var(--body-background-color);
 }
