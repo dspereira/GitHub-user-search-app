@@ -17,14 +17,14 @@ function App() {
           <h1 className="main-title">devfinder</h1>
           <ThemeSwitcher />
         </header>
-        <Main>
-          <Section>
+        <main>
+          <section>
             <SearchBar onUserProfileUpdate={setUserProfileData}/>
-          </Section>
-          <Section>
+          </section>
+          <section>
             <UserProfile userProfileData={userProfileData}/>
-          </Section>
-        </Main>
+          </section>
+        </main>
       </div>
     </>
   )

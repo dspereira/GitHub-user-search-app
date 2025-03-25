@@ -5,9 +5,6 @@ import iconLocation from "../../assets/icon-location.svg";
 import iconWebsite from "../../assets/icon-website.svg";
 import iconTwitter from "../../assets/icon-twitter.svg";
 import iconCompany from "../../assets/icon-company.svg";
-
-
-
 import InfoDisplay from "./InfoDisplay";
 
 function UserProfile({ userProfileData }) {
@@ -17,18 +14,13 @@ function UserProfile({ userProfileData }) {
   if (!data)
     return <p>Loading...</p>;
 
-
-    
-  console.log(data);
-
-
   return (
     <div className="profile-container">
 
       <img className="avatar-img" src={data.avatar_url}/>
 
       <div className="name-username-container">
-        <h2 className="name">{data.name}</h2>
+        <h2 className="name text-secondary-color">{data.name}</h2>
         <p className="username">@{data.login}</p>
       </div>
 
@@ -39,7 +31,7 @@ function UserProfile({ userProfileData }) {
         {date.date}
       </time>
 
-      <p className="bio">{data.bio}</p>
+      <p className="bio text-primary-color">{data.bio}</p>
 
       <div className="stats-count-container">
         <StatsCount 

@@ -11,14 +11,16 @@
     font-family: "Space Mono", monospace, sans-serif;
     font-size: calc(18 / 16 * 1rem);
     font-weight: 400;
-    color: #222731;
-    background-color: var(--component-background-color);
+    line-height: calc(25 / 16 * 1rem);
+    color: var(--search-bar-text-color);
+    background-color: var(--secondary-background-color);
 }
 
 .search-bar::placeholder {
     font-family: "Space Mono", monospace, sans-serif;
     font-size: calc(18 / 16 * 1rem);
     font-weight: 400;
+    color: var(--search-bar-placeholder-color);
 }
 
 .search-bar:focus {
@@ -34,13 +36,19 @@
     width: calc(106 / 16 * 1rem);
     height: calc(50 / 16 * 1rem);
     border-radius: 10px;
-    background-color: #0079FF;
+    background-color: var(--search-btn-color);
     border: none;
-    color: #FFFF;
+    color: var(--white);
     font-family: "Space Mono", monospace, sans-serif;
     font-size: calc(16 / 16 * 1rem);
     font-weight: 700;
     cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--search-btn-hover-color);
+    transition: background-color 0.3s;
 }
 
 .icon-search {
@@ -48,5 +56,4 @@
     top: 50%;
     left: 27px;
     transform: translateY(-50%);
-
 }

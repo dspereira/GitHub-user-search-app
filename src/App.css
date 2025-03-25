@@ -10,5 +10,5 @@ header {
 }
 
 .main-title {
-  color: var(--primary-title);
+  color: var(--primary-title-color);
 }

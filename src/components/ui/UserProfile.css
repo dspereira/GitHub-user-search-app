@@ -6,7 +6,7 @@
              calc(50 / 16 * 1rem);
 
     margin-top: calc(24 / 16 * 1rem);
-    background-color: var(--component-background-color);
+    background-color: var(--secondary-background-color);
     border-radius: 15px;
 }
 
@@ -35,13 +35,13 @@
 .name {
    font-size: calc(26 / 16 * 1rem);
    font-weight: 700;
-   color: #2B3442;
+   /* color: var(--secondary-title-color); */
 }
 
 .username {
     font-size: calc(16 / 16 * 1rem);
     font-weight: 400;
-    color: #0079FF;
+    color: var(--blue-sparkle);
 }
 
 .name-username-container {
@@ -55,7 +55,7 @@
 .creation-date {
     font-size: calc(15 / 16 * 1rem);
     font-weight: 400;
-    color: #697C9A;
+    color: var(--creation-date-color);
     grid-column: 3 / 4;
     grid-row: 1;
 }
@@ -64,7 +64,7 @@
     font-size: calc(15 / 16 * 1rem);
     font-weight: 400;
     line-height: 25px;
-    color: #4B6A9B;
+    /* color: #4B6A9B; */
     grid-column: 2 / -1;
     grid-row: 2;
     margin-top: calc(20 / 16 * 1rem);
@@ -78,7 +78,7 @@
              calc(83 / 16 * 1rem) 
              calc(17 / 16 * 1rem) 
              calc(32 / 16 * 1rem);
-    background-color: #F6F8FF;
+    background-color: var(--primary-background-color);
     border-radius: calc(10 / 16 * 1rem);
     grid-column: 2 / -1;
     grid-row: 3;

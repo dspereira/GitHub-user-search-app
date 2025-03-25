@@ -22,7 +22,7 @@
 }
 
 .info-display-container {
-    color: #4B6A9B;
+    /* color: var(--text-primary-color); */
     font-size: calc(15 / 16 * 1rem);
     font-weight: 400;
 }

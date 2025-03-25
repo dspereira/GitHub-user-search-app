@@ -7,11 +7,11 @@
 .stats-paragraph span:first-child {
     font-size: calc(13 / 16 * 1rem);
     font-weight: 400;
-    color: #4B6A9B;
+    /* color: #4B6A9B; */
 }
 
 .stats-paragraph span:last-child {
     font-size: calc(22 / 16 * 1rem);
     font-weight: 700;
-    color: #2B3442;
+    /* color: #2B3442; */
 }
