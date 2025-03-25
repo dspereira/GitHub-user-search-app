@@ -7,6 +7,9 @@ import iconTwitter from "../../assets/icon-twitter.svg";
 import iconCompany from "../../assets/icon-company.svg";
 import InfoDisplay from "./InfoDisplay";
 
+
+import IconWebsite from "../icons/IconWebsite";
+
 function UserProfile({ userProfileData }) {
   const data = userProfileData;
   const date = data && data.joined_at;
@@ -16,6 +19,8 @@ function UserProfile({ userProfileData }) {
 
   return (
     <div className="profile-container">
+
+      <IconWebsite />
 
       <img className="avatar-img" src={data.avatar_url}/>
 
