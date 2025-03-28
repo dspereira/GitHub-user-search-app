@@ -6,7 +6,7 @@ import processApiData from "../utils/dataUtils";
 
 const apiUrl = "https://api.github.com/users/";
 
-function SearchBar({ onUserProfileUpdate  }) {
+function SearchBar({ className, onUserProfileUpdate }) {
   const [username, setUsername] = useState("");
 
   useEffect(() => {
@@ -40,7 +40,7 @@ function SearchBar({ onUserProfileUpdate  }) {
 
 
   return (
-    <div className="search-bar-container">
+    <div className={`search-bar-container ${className}`}>
       <form 
         onSubmit={handleSubmit}
       >

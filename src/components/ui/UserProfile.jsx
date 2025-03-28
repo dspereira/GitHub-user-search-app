@@ -8,7 +8,7 @@ import IconCompany from "../icons/IconCompany";
 import IconTwitter from "../icons/IconTwitter";
 
 
-function UserProfile({ userProfileData }) {
+function UserProfile({ className, userProfileData }) {
   const data = userProfileData;
   const date = data && data.joined_at;
   
@@ -16,15 +16,12 @@ function UserProfile({ userProfileData }) {
     return <p>Loading...</p>;
 
   return (
-    <div className="profile-container">
-
+    <div className={`profile-container ${className}`}>
       <img className="avatar-img" src={data.avatar_url}/>
-
       <div className="name-username-container">
         <h2 className="name text-secondary-color">{data.name}</h2>
         <p className="username">@{data.login}</p>
       </div>
-
       <time 
         className="creation-date"
         dateTime={`${date.year}-${date.month}-${date.day}`}

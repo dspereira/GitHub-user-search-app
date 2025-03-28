@@ -19,10 +19,10 @@ function App() {
         </header>
         <main>
           <section>
-            <SearchBar onUserProfileUpdate={setUserProfileData}/>
+            <SearchBar className="shadow" onUserProfileUpdate={setUserProfileData}/>
           </section>
           <section>
-            <UserProfile userProfileData={userProfileData}/>
+            <UserProfile className="shadow" userProfileData={userProfileData}/>
           </section>
         </main>
       </div>

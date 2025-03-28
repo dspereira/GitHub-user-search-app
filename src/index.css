@@ -2,7 +2,6 @@
 
 
 :root {
-  
   /* COLORS*/
   --white: #FFFFFF;
   --infinity: #222731;
@@ -10,11 +9,8 @@
   --anchors-aweigh: #2B3442;
   --blue-sparkle: #0079FF;
   --searching-blue: #697C9A; 
-
   --search-btn-color: var(--blue-sparkle);
   --search-btn-hover-color: #60ABFF;
-
-
 }
 
 :root[theme="light"] {
@@ -25,11 +21,10 @@
   --search-bar-placeholder-color: var(--san-marino);
   --search-bar-text-color: var(--infinity);
   --creation-date-color: var(--searching-blue);
-
   --text-primary-color: var(--san-marino);
   --text-secondary-color: var(--anchors-aweigh);
-
   --text-unavailable-color:  hsla(217, 35%, 45%, 0.5);
+  --shadow-color: hsla(227, 46%, 51%, 0.1986);
 }
 
 :root[theme="dark"] {
@@ -40,11 +35,11 @@
   --search-bar-placeholder-color: var(--white);
   --search-bar-text-color: var(--white);
   --creation-date-color: var(--white);
-
   --text-primary-color: var(--white);
   --text-secondary-color: var(--white);
+  --text-unavailable-color:  hsla(0, 0%, 100%, 0.5);
+  --shadow-color: hsla(212, 22%, 35%, 0);
 
-  --text-unavailable-color:  hsla(0, 0%, 100%, 0.5)
 }
 
 *,
