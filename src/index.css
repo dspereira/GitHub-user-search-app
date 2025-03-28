@@ -14,6 +14,7 @@
   --search-btn-color: var(--blue-sparkle);
   --search-btn-hover-color: #60ABFF;
 
+
 }
 
 :root[theme="light"] {
@@ -27,7 +28,8 @@
 
   --text-primary-color: var(--san-marino);
   --text-secondary-color: var(--anchors-aweigh);
-  
+
+  --text-unavailable-color:  hsla(217, 35%, 45%, 0.5);
 }
 
 :root[theme="dark"] {
@@ -41,6 +43,8 @@
 
   --text-primary-color: var(--white);
   --text-secondary-color: var(--white);
+
+  --text-unavailable-color:  hsla(0, 0%, 100%, 0.5)
 }
 
 *,
@@ -71,4 +75,16 @@ body {
 
 .text-secondary-color {
   color: var(--text-secondary-color);
+}
+
+.icon-primary-color{
+  fill: var(--text-primary-color);
+}
+
+.text-unavailable {
+  color: var(--text-unavailable-color);
+}
+
+.icon-unavailable {
+  fill: var(--text-unavailable-color);
 }

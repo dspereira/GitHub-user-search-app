@@ -1,14 +1,12 @@
 import StatsCount from "./StatsCount";
 import "./UserProfile.css"
 
-import iconLocation from "../../assets/icon-location.svg";
-import iconWebsite from "../../assets/icon-website.svg";
-import iconTwitter from "../../assets/icon-twitter.svg";
-import iconCompany from "../../assets/icon-company.svg";
 import InfoDisplay from "./InfoDisplay";
-
-
+import IconLocation from "../icons/IconLocation";
 import IconWebsite from "../icons/IconWebsite";
+import IconCompany from "../icons/IconCompany";
+import IconTwitter from "../icons/IconTwitter";
+
 
 function UserProfile({ userProfileData }) {
   const data = userProfileData;
@@ -19,8 +17,6 @@ function UserProfile({ userProfileData }) {
 
   return (
     <div className="profile-container">
-
-      <IconWebsite />
 
       <img className="avatar-img" src={data.avatar_url}/>
 
@@ -53,36 +49,48 @@ function UserProfile({ userProfileData }) {
         />
       </div>
 
+      <InfoDisplay 
+        className={`location ${data.location ? "text-primary-color" : "text-unavailable"}`}
+        info={data.location || "Not Available"}
+      >
+        <IconLocation 
+          className={`${data.location ? "icon-primary-color" : "icon-unavailable"}`}
+        />
+      </InfoDisplay>
+    
       <InfoDisplay
-        className="location"
-        icon={iconLocation}
-        alt={"Location Icon"}
-        info={data.location}
-      />
-      <InfoDisplay
-        className="website"
-        icon={iconWebsite}
-        alt={"Website Icon"}
-        info={data.blog}
+        className={`website ${data.blog ? "text-primary-color" : "text-unavailable"}`}
+        info={data.blog || "Not Available"}
         link={
           data.blog.substring(0, 7) === "http://" 
           || data.blog.substring(0, 8) === "https://"
           ? data.blog : `https://${data.blog}`
         }
-      />
+      >
+        <IconWebsite 
+          className={`${data.blog ? "icon-primary-color" : "icon-unavailable"}`}
+        />
+      </InfoDisplay>
+  
       <InfoDisplay
-        className="twitter"
-        icon={iconTwitter}
-        alt={"Twitter Icon"}
-        info={data.twitter && `@${data.twitter}`}
+        className={`twitter ${data.twitter ? "text-primary-color" : "text-unavailable"}`}
+        info={(data.twitter && `@${data.twitter}`) || "Not Available"}
         link={`https://x.com/${encodeURIComponent(data.twitter)}`}
-      />
-      <InfoDisplay
-        className="company"
-        icon={iconCompany}
-        alt={"Company Icon"}
-        info={data.company}
-      />
+      >
+        <IconTwitter 
+          className={`${data.twitter ? "icon-primary-color" : "icon-unavailable"}`}
+        />
+      </InfoDisplay>
+
+
+      <InfoDisplay 
+        className={`company ${data.company ? "text-primary-color" : "text-unavailable"}`}
+        info={data.company || "Not Available"}
+      >
+        <IconCompany 
+          className={`${data.company ? "icon-primary-color" : "icon-unavailable"}`}
+        />
+      </InfoDisplay>
     </div>
   )
 }
