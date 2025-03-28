@@ -10,3 +10,15 @@
     color: var(--theme-toggle-btn-color);
     cursor: pointer;
 }
+
+.btn-theme:hover {
+    color: var(--theme-toggle-btn-color-hover);
+}
+
+.icon {
+    fill: var(--theme-toggle-icon-color);
+}
+
+.icon-hover {
+    fill: var(--theme-toggle-icon-hover-color);
+}
