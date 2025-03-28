@@ -10,8 +10,16 @@ const LIGHT = "light";
 export default function ThemeSwitcher() {
   const [theme, setTheme] = useState(DARK);
 
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme && savedTheme !== theme)
+        setTheme(savedTheme);
+  }, []);
+
   useEffect(() => {
     document.querySelector("html").setAttribute("theme", theme);
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
   return (
@@ -29,5 +37,4 @@ export default function ThemeSwitcher() {
       />
     </button>
   );
-
 }
