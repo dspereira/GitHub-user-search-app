@@ -32,6 +32,7 @@ function UserProfile({ userProfileData }) {
         {date.date}
       </time>
 
+
       <p className="bio text-primary-color">{data.bio}</p>
 
       <div className="stats-count-container">
