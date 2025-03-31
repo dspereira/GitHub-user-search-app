@@ -1,12 +1,13 @@
 .container {
   width: calc(730 / 16 * 1rem);
+  margin: auto;
 }
 
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom:   calc(36 / 16 * 1rem);
+  margin-bottom:  calc(36 / 16 * 1rem);
 }
 
 .main-title {
@@ -27,5 +28,13 @@ header {
 @media (max-width: calc(768 / 16 * 1em))  {
   .container {
     width: calc(573 / 16 * 1rem);
+  }  
+}
+
+
+@media (max-width: calc(600 / 16 * 1em))  {
+  .container {
+    width: 100%;
+    padding: 0 24px 0 24px;
   }  
 }

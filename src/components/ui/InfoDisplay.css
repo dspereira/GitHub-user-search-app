@@ -26,3 +26,14 @@
     font-size: calc(15 / 16 * 1rem);
     font-weight: 400;
 }
+
+/*
+--------------------------------
+        MOBILE VERSION
+--------------------------------
+*/
+@media (max-width: calc(550 / 16 * 1em))  {
+    .info-display-container {
+        font-size: calc(13 / 16 * 1rem);
+    }
+}

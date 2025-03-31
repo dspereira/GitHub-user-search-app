@@ -29,14 +29,6 @@ function UserProfile({ className, userProfileData }) {
     );
   }
 
-
-  // return (
-  //   <div className={`profile-container ${className}`}>
-  //     <img className="avatar-img" src={data.avatar_url}/>
-  //   </div>
-  // )
-
-
   return (
     <div className={`profile-container ${className}`}>
       <img className="avatar-img" src={data.avatar_url}/>
