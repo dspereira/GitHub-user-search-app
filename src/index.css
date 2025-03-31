@@ -12,6 +12,7 @@
   --ceil: #90A4D4;
   --search-btn-color: var(--blue-sparkle);
   --search-btn-hover-color: #60ABFF;
+  --no-results-color: #F74646;
 }
 
 :root[theme="light"] {

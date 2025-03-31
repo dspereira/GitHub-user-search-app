@@ -60,9 +60,10 @@ function UserProfile({ className, userProfileData }) {
         className={`website ${data.blog ? "text-primary-color" : "text-unavailable"}`}
         info={data.blog || "Not Available"}
         link={
-          data.blog.substring(0, 7) === "http://" 
-          || data.blog.substring(0, 8) === "https://"
-          ? data.blog : `https://${data.blog}`
+            data.blog &&
+            (data.blog.substring(0, 7) === "http://" 
+            || data.blog.substring(0, 8) === "https://"
+            ? data.blog : `https://${data.blog}`)
         }
       >
         <IconWebsite 
@@ -73,13 +74,15 @@ function UserProfile({ className, userProfileData }) {
       <InfoDisplay
         className={`twitter ${data.twitter ? "text-primary-color" : "text-unavailable"}`}
         info={(data.twitter && `@${data.twitter}`) || "Not Available"}
-        link={`https://x.com/${encodeURIComponent(data.twitter)}`}
+        link={
+          data.twitter &&
+          `https://x.com/${encodeURIComponent(data.twitter)}`
+        }
       >
         <IconTwitter 
           className={`${data.twitter ? "icon-primary-color" : "icon-unavailable"}`}
         />
       </InfoDisplay>
-
 
       <InfoDisplay 
         className={`company ${data.company ? "text-primary-color" : "text-unavailable"}`}

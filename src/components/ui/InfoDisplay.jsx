@@ -1,6 +1,7 @@
 import "./InfoDisplay.css"
 
 export default function InfoDisplay({ children, className, info, link }) {
+
   if (info && info.length && link) {
     return (
       <div className={`info-display-container ${className}`}>

@@ -31,20 +31,10 @@ export default function ThemeSwitcher() {
       onMouseLeave={e => {setIconClass("icon")}}
     >
       <span>{theme === "dark" ? LIGHT.toUpperCase() : DARK.toUpperCase()}</span>
-
-      {
-        theme === "dark" ?  
+      {theme === "dark" ?  
           <IconSun className={iconClass}/> :
           <IconMoon className={iconClass}/>
       }
-
-      {/* <img
-        src={theme === "dark" ?  iconSun : iconMonn }
-        alt="Icon for theme toggle button"
-        width="20px"
-        height="20px"
-      /> */}
-
     </button>
   );
 }

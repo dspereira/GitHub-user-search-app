@@ -8,34 +8,37 @@ const apiUrl = "https://api.github.com/users/";
 
 function SearchBar({ className, onUserProfileUpdate }) {
   const [username, setUsername] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [hasNoData, setHasNoData] = useState(true);
 
-  useEffect(() => {
-    async function fetchUserData() {
-      try {
-        const res = await fetch(`${apiUrl}octocat`);
-        const data = await res.json();
-        onUserProfileUpdate (processApiData(data));
-      }
-      catch(e) {
-        console.log("error: ", e);
+  async function handleCallApi(url) {
+    try {
+      setIsLoading(true);
+      const res = await fetch(url);
+      const data = await res.json();
+      if (!res.ok)
+        setHasNoData(false);
+      else {
+        setHasNoData(true);
+        onUserProfileUpdate(processApiData(data));
       }
     }
-    fetchUserData();
+    catch(e) {
+      console.log("error: ", e);
+    }
+    finally {
+      setIsLoading(false);
+    }
+  }
+
+  useEffect(() => {
+    handleCallApi(`${apiUrl}octocat`);
   }, []);
 
 
-  const handleSubmit = async (e) => {
-  e.preventDefault();
-  try {
-    const res = await fetch(`${apiUrl}${username}`);
-    const data = await res.json();
-    onUserProfileUpdate (processApiData(data));
-  }
-  catch(e) {
-    console.log("error: ", e);
-  }
-
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    handleCallApi(`${apiUrl}${username}`);
   };
 
 
@@ -50,18 +53,22 @@ function SearchBar({ className, onUserProfileUpdate }) {
           placeholder="Search GitHub username…"
           aria-label="Search"
           onChange={e => setUsername(e.target.value)}
-        ></input>
-        <button 
+          ></input>
+        <button
+          disabled={isLoading}
           className="btn"
           type="submit"
-        >
-            Search
+          >
+          Search
         </button>
         <img
           className="icon-search"
           src={icon}
           alt="Search icon"
         />
+        <span className="no-results">
+          {hasNoData || "No Results"}
+        </span>
       </form>
     </div>
   );

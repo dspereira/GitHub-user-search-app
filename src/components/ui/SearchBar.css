@@ -51,9 +51,24 @@
     transition: background-color 0.3s;
 }
 
+.btn:disabled {
+    background-color: var(--search-btn-hover-color);
+    cursor: none;
+}
+
 .icon-search {
     position: absolute;
     top: 50%;
     left: 27px;
     transform: translateY(-50%);
+}
+
+.no-results {
+    position: absolute;
+    top: 50%;
+    right: calc(140 / 16 * 1rem);
+    transform: translateY(-50%);
+    color: var(--no-results-color);
+    font-size: calc(15 / 16 * 1rem);
+    font-weight: 700;
 }
