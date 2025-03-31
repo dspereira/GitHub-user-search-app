@@ -21,7 +21,6 @@
     grid-template-rows: repeat(5, auto);
 }
 
-
 .avatar-img {
     width: calc(117 / 16 * 1rem);
     height: calc(117 / 16 * 1rem);
@@ -30,7 +29,6 @@
     grid-column: 1;
     grid-row: 1 / -1;
 }
-
 
 .name {
    font-size: calc(26 / 16 * 1rem);
@@ -54,7 +52,7 @@
 
 .creation-date {
     display: flex;
-    height: calc(39 / 16 * 1rem);;
+    height: calc(39 / 16 * 1rem);
     align-items: center;
     justify-content: end;
     font-size: calc(15 / 16 * 1rem);
@@ -128,4 +126,79 @@
 
 .message-text-error {  
     color: var(--message-error);   
+}
+
+
+/*
+--------------------------------
+        TABLET VERSION
+--------------------------------
+*/
+
+@media (max-width: calc(768 / 16 * 1em))  {
+    .profile-container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(8, auto);
+    }
+
+    .avatar-img {
+        grid-column: 1 / 4;
+        grid-row: 1 / 5;
+        margin: 0;  
+    }
+
+    .name-username-container {
+        grid-column: 4 / -1;
+        grid-row: 2;
+        margin-left: calc(41 / 16 * 1rem);
+    }
+    
+    .creation-date {
+        grid-column: 4 / -1;
+        grid-row: 3;
+        height: auto;
+        display: block;
+        margin-left: calc(41 / 16 * 1rem);
+        margin-top: calc(4 / 16 * 1rem);
+
+    }
+
+    .bio {
+        grid-column: 1 / -1;
+        grid-row: 5;
+        margin-top: calc(24 / 16 * 1rem);
+    }
+
+    .stats-count-container {
+        grid-column: 1 / -1;
+        grid-row: 6;
+        margin-top: calc(32 / 16 * 1rem);
+        padding-right: calc(81 / 16 * 1rem);
+    }
+
+    .location {
+        grid-column: 1 / 8;
+        grid-row: 7;
+        margin-top: calc(30 / 16 * 1rem);
+    }
+    
+    .website {
+        grid-column: 1 / 8;
+        grid-row: 8;
+        margin-top: calc(19 / 16 * 1rem);
+    }
+    
+    .twitter {
+        grid-column: 8 / -1;
+        grid-row: 7;
+        margin-top: calc(32 / 16 * 1rem);
+    }
+    
+    .company {
+        grid-column: 8 / -1;
+        grid-row: 8;
+        margin-top: calc(19 / 16 * 1rem);
+    }
+
 }

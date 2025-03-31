@@ -29,6 +29,14 @@ function UserProfile({ className, userProfileData }) {
     );
   }
 
+
+  // return (
+  //   <div className={`profile-container ${className}`}>
+  //     <img className="avatar-img" src={data.avatar_url}/>
+  //   </div>
+  // )
+
+
   return (
     <div className={`profile-container ${className}`}>
       <img className="avatar-img" src={data.avatar_url}/>
@@ -36,13 +44,13 @@ function UserProfile({ className, userProfileData }) {
         <h2 className="name text-secondary-color">{data.name}</h2>
         <p className="username">@{data.login}</p>
       </div>
+
       <time 
         className="creation-date"
         dateTime={`${date.year}-${date.month}-${date.day}`}
       >
         {date.date}
       </time>
-
 
       <p className="bio text-primary-color">{data.bio}</p>
 
