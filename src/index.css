@@ -13,6 +13,7 @@
   --search-btn-color: var(--blue-sparkle);
   --search-btn-hover-color: #60ABFF;
   --no-results-color: #F74646;
+  --message-error: #F74646;
 }
 
 :root[theme="light"] {

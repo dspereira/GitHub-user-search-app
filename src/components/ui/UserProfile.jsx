@@ -11,9 +11,23 @@ import IconTwitter from "../icons/IconTwitter";
 function UserProfile({ className, userProfileData }) {
   const data = userProfileData;
   const date = data && data.joined_at;
-  
-  if (!data)
-    return <p>Loading...</p>;
+
+  if (!data) {
+    return (
+      <div className={`profile-container data-loading ${className}`}>
+        <p className="message-text text-secondary-color">Please wait, loading data...</p>
+      </div>
+    );
+  }
+
+  if (data === "error") {
+    return (
+      <div className={`profile-container data-loading ${className}`}>
+        <p className="message-text message-text-error">An error occurred while loading data.</p>
+        <p className="message-text message-text-error">Please try again later.</p>
+      </div>
+    );
+  }
 
   return (
     <div className={`profile-container ${className}`}>

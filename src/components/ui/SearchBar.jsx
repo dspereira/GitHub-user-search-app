@@ -25,6 +25,7 @@ function SearchBar({ className, onUserProfileUpdate }) {
     }
     catch(e) {
       console.log("error: ", e);
+      onUserProfileUpdate("error");
     }
     finally {
       setIsLoading(false);
@@ -48,11 +49,12 @@ function SearchBar({ className, onUserProfileUpdate }) {
         onSubmit={handleSubmit}
       >
         <input 
-          className="search-bar" 
+          className= {`search-bar ${!hasNoData ? "no-result-padding-adjustment" : "" }`}
           type="text"
           placeholder="Search GitHub username…"
           aria-label="Search"
           onChange={e => setUsername(e.target.value)}
+          maxLength="50"
           ></input>
         <button
           disabled={isLoading}

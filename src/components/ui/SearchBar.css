@@ -7,6 +7,7 @@
     width: 100%;
     border-radius: 15px;
     padding-left: 75px;
+    padding-right: 130px;
     border: none;
     font-family: "Space Mono", monospace, sans-serif;
     font-size: calc(18 / 16 * 1rem);
@@ -71,4 +72,8 @@
     color: var(--no-results-color);
     font-size: calc(15 / 16 * 1rem);
     font-weight: 700;
+}
+
+.no-result-padding-adjustment {
+    padding-right: 250px;
 }
