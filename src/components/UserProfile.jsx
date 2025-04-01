@@ -2,10 +2,10 @@ import StatsCount from "./StatsCount";
 import "./UserProfile.css"
 
 import InfoDisplay from "./InfoDisplay";
-import IconLocation from "../icons/IconLocation";
-import IconWebsite from "../icons/IconWebsite";
-import IconCompany from "../icons/IconCompany";
-import IconTwitter from "../icons/IconTwitter";
+import IconLocation from "./icons/IconLocation";
+import IconWebsite from "./icons/IconWebsite";
+import IconCompany from "./icons/IconCompany";
+import IconTwitter from "./icons/IconTwitter";
 
 
 function UserProfile({ className, userProfileData }) {

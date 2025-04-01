@@ -1,5 +1,5 @@
 import "./SearchBar.css";
-import icon from "../../assets/icon-search.svg";
+import icon from "../assets/icon-search.svg";
 import { useEffect, useState } from "react";
 import processApiData from "../utils/dataUtils";
 

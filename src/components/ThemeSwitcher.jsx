@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import "./ThemeSwitcher.css"
 
-import IconMoon from "../icons/IconMoon";
-import IconSun from "../icons/IconSun";
+import IconMoon from "./icons/IconMoon";
+import IconSun from "./icons/IconSun";
 
 const DARK = "dark";
 const LIGHT = "light";
