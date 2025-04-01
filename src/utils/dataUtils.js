@@ -1,7 +1,5 @@
 export default function processApiData(data) {
 
-  console.log(data);
-
   return {
     avatar_url: getField("avatar_url", data),
     name: getField("name", data),

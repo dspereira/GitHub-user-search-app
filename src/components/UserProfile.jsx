@@ -33,7 +33,7 @@ function UserProfile({ className, userProfileData }) {
     <div className={`profile-container ${className}`}>
       <img className="avatar-img" src={data.avatar_url}/>
       <div className="name-username-container">
-        <h2 className="name text-secondary-color">{data.name}</h2>
+        <h2 className="name text-secondary-color">{data.name || data.login}</h2>
         <p className="username">@{data.login}</p>
       </div>
 
@@ -101,6 +101,10 @@ function UserProfile({ className, userProfileData }) {
       <InfoDisplay 
         className={`company ${data.company ? "text-primary-color" : "text-unavailable"}`}
         info={data.company || "Not Available"}
+        link={
+          data.company && data.company.substring(0,1) === "@" &&
+          `https://github.com/${data.company.substring(1)}`
+        }
       >
         <IconCompany 
           className={`${data.company ? "icon-primary-color" : "icon-unavailable"}`}
