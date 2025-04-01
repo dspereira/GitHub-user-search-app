@@ -25,6 +25,15 @@ Users should be able to:
 
 ### Screenshot
 
+#### Desktop
+
+| ![App Screenshot 1](./screenshots/light-mode-desktop.png) | ![App Screenshot 2](./screenshots/dark-mode-desktop.png) |
+| -------------------------------------------- | -------------------------------------------- |
+
+#### Mobile
+
+| ![App Screenshot 1](./screenshots/light-mode-mobile.png) | ![App Screenshot 2](./screenshots/dark-mode-mobile.png) |
+| -------------------------------------------- | -------------------------------------------- |
 
 ### Links
 
