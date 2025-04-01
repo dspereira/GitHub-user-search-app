@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github-user-search-yo1r.netlify.app/)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/github-search-user---react-yRK2V-hFoh](https://www.frontendmentor.io/solutions/github-search-user---react-yRK2V-hFoh)
+- Live Site URL: [https://github-user-search-yo1r.netlify.app/](https://github-user-search-yo1r.netlify.app/)
 
 ## Built with
 
