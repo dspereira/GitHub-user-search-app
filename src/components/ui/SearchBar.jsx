@@ -9,7 +9,7 @@ const apiUrl = "https://api.github.com/users/";
 function SearchBar({ className, onUserProfileUpdate }) {
   const [username, setUsername] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [hasNoData, setHasNoData] = useState(true);
+  const [hasNoData, setHasNoData] = useState(false);
 
   async function handleCallApi(url) {
     try {
@@ -17,9 +17,9 @@ function SearchBar({ className, onUserProfileUpdate }) {
       const res = await fetch(url);
       const data = await res.json();
       if (!res.ok)
-        setHasNoData(false);
-      else {
         setHasNoData(true);
+      else {
+        setHasNoData(false);
         onUserProfileUpdate(processApiData(data));
       }
     }
@@ -49,11 +49,15 @@ function SearchBar({ className, onUserProfileUpdate }) {
         onSubmit={handleSubmit}
       >
         <input 
-          className= {`search-bar ${!hasNoData ? "no-result-padding-adjustment" : "" }`}
+          className= {`search-bar ${hasNoData ? "no-result-padding-adjustment" : "" }`}
           type="text"
           placeholder="Search GitHub username…"
           aria-label="Search"
-          onChange={e => setUsername(e.target.value)}
+          onChange={e => {
+              setUsername(e.target.value);
+              setHasNoData(false);
+            }
+          }
           maxLength="50"
           ></input>
         <button
@@ -69,7 +73,7 @@ function SearchBar({ className, onUserProfileUpdate }) {
           alt="Search icon"
         />
         <span className="no-results">
-          {hasNoData || "No Results"}
+          {!hasNoData || "No Results"}
         </span>
       </form>
     </div>

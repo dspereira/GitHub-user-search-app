@@ -36,4 +36,9 @@
     .info-display-container {
         font-size: calc(13 / 16 * 1rem);
     }
+
+    .info-display-container,
+    .info-display-container a.info-link {
+        gap: 13px
+    }
 }

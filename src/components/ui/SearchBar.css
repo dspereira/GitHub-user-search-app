@@ -6,8 +6,8 @@
     height: calc(69 / 16 * 1rem);
     width: 100%;
     border-radius: 15px;
-    padding-left: 75px;
-    padding-right: 130px;
+    padding-left: calc(80 / 16 * 1rem);
+    padding-right: calc(130 / 16 * 1rem);
     border: none;
     font-family: "Space Mono", monospace, sans-serif;
     font-size: calc(18 / 16 * 1rem);
@@ -76,4 +76,46 @@
 
 .no-result-padding-adjustment {
     padding-right: 250px;
+}
+
+
+/*
+--------------------------------
+        MOBILE VERSION
+--------------------------------
+*/
+@media (max-width: calc(550 / 16 * 1em))  {
+    .search-bar {
+        height: calc(60 / 16 * 1rem);
+    }
+
+    .btn {
+        font-size: calc(14 / 16 * 1rem);
+        width: calc(84 / 16 * 1rem);
+        height: calc(46 / 16 * 1rem);
+    }
+
+    .search-bar {
+        padding-left: calc(45 / 16 * 1rem);
+        padding-right: calc(100 / 16 * 1rem);
+    }
+
+    .search-bar::placeholder {
+        font-size: calc(13 / 16 * 1rem);
+    }
+
+    .icon-search {
+        width: calc(20 / 16 * 1rem);
+        height: calc(20 / 16 * 1rem);
+        left: calc(16 / 16 * 1rem);
+    }
+
+    .no-results {
+        right: calc(105 / 16 * 1rem);
+        font-size: calc(13 / 16 * 1rem);
+    }
+
+    .no-result-padding-adjustment {
+        padding-right: 200px;
+    }
 }
