@@ -2,6 +2,7 @@
     font-family: "Space Mono", monospace, sans-serif;
     font-size: calc(13 / 16 * 1rem);
     font-weight: 700;
+    letter-spacing: 2.5px;
     background-color: transparent;
     border: none;
     display: flex;

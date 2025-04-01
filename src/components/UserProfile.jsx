@@ -31,7 +31,7 @@ function UserProfile({ className, userProfileData }) {
 
   return (
     <div className={`profile-container ${className}`}>
-      <img className="avatar-img" src={data.avatar_url}/>
+      <img className="avatar-img" src={data.avatar_url} alt="Profile photo of the user."/>
       <div className="name-username-container">
         <h2 className="name text-secondary-color">{data.name || data.login}</h2>
         <p className="username">@{data.login}</p>
