@@ -18,8 +18,6 @@ function App() {
         <main>
           <section>
             <SearchBar className="shadow" onUserProfileUpdate={setUserProfileData}/>
-          </section>
-          <section>
             <UserProfile className="shadow" userProfileData={userProfileData}/>
           </section>
         </main>

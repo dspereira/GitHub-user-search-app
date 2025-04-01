@@ -16,7 +16,7 @@
   --message-error: #F74646;
 }
 
-:root[theme="light"] {
+:root[data-theme="light"] {
   --primary-background-color: #F6F8FF;
   --secondary-background-color: #FEFEFE;
   --theme-toggle-btn-color: var(--searching-blue);
@@ -35,7 +35,7 @@
   --shadow-color: hsla(227, 46%, 51%, 0.1986);
 }
 
-:root[theme="dark"] {
+:root[data-theme="dark"] {
   --primary-background-color: #141D2F;
   --secondary-background-color: #1E2A47;
   --theme-toggle-btn-color: var(--white);

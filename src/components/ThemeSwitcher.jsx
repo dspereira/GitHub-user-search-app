@@ -6,20 +6,21 @@ import IconSun from "./icons/IconSun";
 
 const DARK = "dark";
 const LIGHT = "light";
+const ATTRIBUTE = "data-theme";
 
 export default function ThemeSwitcher() {
   const [theme, setTheme] = useState(DARK);
   const [iconClass, setIconClass] = useState("icon");
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
+    const savedTheme = localStorage.getItem(ATTRIBUTE);
     if (savedTheme && savedTheme !== theme)
         setTheme(savedTheme);
   }, []);
 
   useEffect(() => {
-    document.querySelector("html").setAttribute("theme", theme);
-    localStorage.setItem("theme", theme);
+    document.querySelector("html").setAttribute(ATTRIBUTE, theme);
+    localStorage.setItem(ATTRIBUTE, theme);
   }, [theme]);
 
   return (
